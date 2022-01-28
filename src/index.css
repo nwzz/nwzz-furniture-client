@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-100;
+}
+
+/* layout start */
+.containers {
+  @apply w-screen h-screen grid grid-rows-layout grid-cols-1;
+}
+.body {
+  @apply grid overflow-hidden grid-cols-1 md:grid-cols-layout;
+}
+.leftbar {
+  @apply hidden pl-5 py-5 fixed left-0 w-44 min-h-screen bg-primary overflow-y-auto overflow-x-hidden border-t z-50 md:block md:w-72 md:relative;
+}
+
+/* Form Css */
+.form-col {
+  @apply grid grid-cols-1 gap-5;
+}
+.form-row {
+  @apply grid grid-cols-1;
+}
+.form-control {
+  @apply w-full p-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none sm:text-sm;
+}
+.input-border-primary {
+  @apply focus:ring-primary focus:border-primary;
+}
+.input-border-danger {
+  @apply focus:ring-red-400 focus:border-red-400;
+}
+/* Navbar Css*/
+.nav-item {
+  @apply py-2 mx-2 relative flex items-center uppercase font-medium leading-tight;
+}
+.sub-nav {
+  @apply px-0 py-16 w-0 h-0 absolute mt-1 -left-5 rounded-md hidden group-hover:block group-hover:w-navmenu group-hover:h-72 group-hover:bg-white;
+}
+.sidebar-menu-item {
+  @apply flex items-center w-56 h-10 px-3 mt-1 rounded hover:bg-darker hover:text-gray-300;
+}
+.user-dropdown {
+  @apply py-5 w-0 h-0 absolute mt-1 right-0 rounded-md hidden shadow cursor-default group-hover:block group-hover:w-60 group-hover:h-52 group-hover:bg-white;
+}
+/* Button CSS */
+.btn {
+  @apply p-3 font-semibold text-white flex justify-center items-center rounded-lg shadow-lg cursor-pointer transition delay-75;
+}
+.btn-edit {
+  @apply btn h-10 w-14 bg-success hover:bg-green-600;
+}
+.btn-delete {
+  @apply btn h-10 w-14 bg-danger hover:bg-red-600;
+}
+.btn-orange {
+  @apply btn bg-orange hover:bg-yam;
+}
+.btn-black {
+  @apply btn bg-dark hover:bg-darker;
+}
+.btn-primary {
+  @apply py-2 px-4 text-gray-800 font-medium border border-gray-300 inline-flex items-center hover:bg-gray-800 hover:text-white;
+}
+.btn-secondary {
+  @apply py-3 px-8 font-medium border border-gray-300 inline-flex items-center justify-center bg-gray-800 text-white hover:bg-white hover:text-gray-800;
+}
+
+/* Card Css */
+.card {
+  @apply grid grid-cols-1 place-self-center bg-white rounded-lg shadow-sm break-words p-5;
+}
+
+/* List / Table style */
+.list-wrapper {
+  @apply border-green-100 grid grid-cols-1 space-y-1;
+}
+.list-header {
+  @apply hidden bg-gray-300 text-primary p-3 rounded-t-md;
+}
+.list-body {
+  @apply p-3  gap-1 odd:bg-gray-100 even:bg-gray-200 hover:bg-gray-400 hover:text-white;
+}
+.list-footer {
+  @apply bg-gray-300 text-primary rounded-b-md p-3 mt-2;
+}

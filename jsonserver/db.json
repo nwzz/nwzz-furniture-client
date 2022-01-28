@@ -1,0 +1,113 @@
+{
+  "product-list": [
+    {
+      "id": "238853",
+      "name": "Cocoa Half Leather Sofa",
+      "oldPrice": 15500,
+      "newPrice": 6995,
+      "images": [
+        { "id": 1, "url": "https://i.ibb.co/D9DXxr3/sofa-2.jpg" },
+        { "id": 2, "url": "https://i.ibb.co/6XCjFHL/sofa.jpg" },
+        { "id": 3, "url": "https://i.ibb.co/2tDVtJX/sofa-1.jpg" },
+        { "id": 4, "url": "https://i.ibb.co/rZRZrQj/sofa-2.jpg" },
+        { "id": 5, "url": "https://i.ibb.co/nBD4tmt/sofa-4.jpg" },
+        { "id": 6, "url": "https://i.ibb.co/0ttLQwn/sofa-5.jpg" },
+        { "id": 7, "url": "https://i.ibb.co/6B397bp/sofa-3.jpg" }
+      ],
+      "discount": "-10%",
+      "isNew": true,
+      "inStock": true,
+      "outStock": false,
+      "title": "For the love of Cocoa!",
+      "setincludes": "Set includes : 3 Seater + 2 Seater + 1seater + 1 seater",
+      "shortDes": [
+        "Our latest sofa, Cocoa is the perfect half leather sofa for all who love affordable luxury.",
+        "The rich brown color, coupled with the comfortable seating make this sofa everyone’s favorite!",
+        "The sleek legs, give this luxurious sofa a trendy look and feel."
+      ],
+      "information": {
+        "shipping": "We currently offer free shipping inside UAE on all online orders over AED 700.",
+        "sizeing": "Fits true to size. Do you need size advice?",
+        "assistance": "Displayed Colour is subjected to Availability , whatsapp for customization and color options.Contact us on +971 55 979 3675, or email us at",
+        "storeMail": "webstore@royalgroup.ae."
+      },
+      "description": "Relax and lounge in this luxurious USA designed sofa! Seat cushions crafted with high resilience foam, layers of innovative pearl foam and fiber provide unprecedented levels of comfort. Contemporary pillow back design adds to the luxurious style. Solid wood frame & high resilience foam ensure long term durability. Fully customizable by size, configuration, fabric & color",
+      "feedback": []
+    },
+    {
+      "id": "486665",
+      "name": "Ayilla Sofa Set",
+      "oldPrice": 15500,
+      "newPrice": 6995,
+      "images": [
+        { "id": 1, "url": "https://i.ibb.co/D9DXxr3/sofa-2.jpg" },
+        { "id": 2, "url": "https://i.ibb.co/6XCjFHL/sofa.jpg" }
+      ],
+      "discount": "10%",
+      "isNew": false,
+      "inStock": true,
+      "outStock": false,
+      "title": "For the love of Cocoa!",
+      "setincludes": "Set includes : 3 Seater + 2 Seater + 1seater + 1 seater",
+      "shortDes": [],
+      "information": {
+        "shipping": "We currently offer free shipping inside UAE on all online orders over AED 700.",
+        "sizeing": "Fits true to size. Do you need size advice?",
+        "assistance": "Displayed Colour is subjected to Availability , whatsapp for customization and color options.Contact us on +971 55 979 3675, or email us at",
+        "storeMail": "webstore@royalgroup.ae."
+      },
+      "description": "Relax and lounge in this luxurious USA designed sofa! Seat cushions crafted with high resilience foam, layers of innovative pearl foam and fiber provide unprecedented levels of comfort. Contemporary pillow back design adds to the luxurious style. Solid wood frame & high resilience foam ensure long term durability. Fully customizable by size, configuration, fabric & color",
+      "feedback": []
+    },
+    {
+      "id": "854763",
+      "name": "Cocoa Half Leather Sofa",
+      "oldPrice": 15500,
+      "newPrice": 6995,
+      "images": [
+        { "id": 1, "url": "https://i.ibb.co/D9DXxr3/sofa-2.jpg" },
+        { "id": 2, "url": "https://i.ibb.co/6XCjFHL/sofa.jpg" }
+      ],
+      "discount": "10%",
+      "isNew": true,
+      "inStock": true,
+      "outStock": false,
+      "title": "For the love of Cocoa!",
+      "setincludes": "Set includes : 3 Seater + 2 Seater + 1seater + 1 seater",
+      "shortDes": [],
+      "information": {
+        "shipping": "We currently offer free shipping inside UAE on all online orders over AED 700.",
+        "sizeing": "Fits true to size. Do you need size advice?",
+        "assistance": "Displayed Colour is subjected to Availability , whatsapp for customization and color options.Contact us on +971 55 979 3675, or email us at",
+        "storeMail": "webstore@royalgroup.ae."
+      },
+      "description": "Relax and lounge in this luxurious USA designed sofa! Seat cushions crafted with high resilience foam, layers of innovative pearl foam and fiber provide unprecedented levels of comfort. Contemporary pillow back design adds to the luxurious style. Solid wood frame & high resilience foam ensure long term durability. Fully customizable by size, configuration, fabric & color",
+      "feedback": []
+    },
+    {
+      "id": "abc",
+      "name": "Ayilla Sofa Set",
+      "oldPrice": 15500,
+      "newPrice": 6995,
+      "images": [
+        { "id": 1, "url": "https://i.ibb.co/D9DXxr3/sofa-2.jpg" },
+        { "id": 2, "url": "https://i.ibb.co/6XCjFHL/sofa.jpg" }
+      ],
+      "discount": "10%",
+      "isNew": false,
+      "inStock": true,
+      "outStock": false,
+      "title": "For the love of Cocoa!",
+      "setincludes": "Set includes : 3 Seater + 2 Seater + 1seater + 1 seater",
+      "shortDes": [],
+      "information": {
+        "shipping": "We currently offer free shipping inside UAE on all online orders over AED 700.",
+        "sizeing": "Fits true to size. Do you need size advice?",
+        "assistance": "Displayed Colour is subjected to Availability , whatsapp for customization and color options.Contact us on +971 55 979 3675, or email us at",
+        "storeMail": "webstore@royalgroup.ae."
+      },
+      "description": "Relax and lounge in this luxurious USA designed sofa! Seat cushions crafted with high resilience foam, layers of innovative pearl foam and fiber provide unprecedented levels of comfort. Contemporary pillow back design adds to the luxurious style. Solid wood frame & high resilience foam ensure long term durability. Fully customizable by size, configuration, fabric & color",
+      "feedback": []
+    }
+  ]
+}
