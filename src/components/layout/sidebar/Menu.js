@@ -1,9 +1,10 @@
 import React from "react";
-import { dashboard } from "../../../data/adminDashboard";
+import { admindashboard } from "../../../data/dashboard";
 import MainMenu from "./MainMenu";
 
 const Menu = () => {
-  const data = dashboard;
+  const data = admindashboard;
+
   return (
     <div className="flex flex-col w-56 items-center h-full overflow-hidden text-gray-400">
       <div className="">

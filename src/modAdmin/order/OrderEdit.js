@@ -6,6 +6,7 @@ import { HashLoading } from "../../components/Loading";
 import TopHeader from "../../components/TopHeader";
 import { useGetData } from "../../hooks/dataApi";
 import OrderDetails from "./OrderDetails";
+import OrderUpdate from "./OrderUpdate";
 
 const OrderEdit = () => {
   const { id } = useParams();
@@ -31,8 +32,6 @@ const OrderEdit = () => {
       </AdminLayout>
     );
 
-  console.log("list", list.data);
-
   return (
     <AdminLayout>
       <div className="card w-full max-w-screen-xl">
@@ -41,10 +40,24 @@ const OrderEdit = () => {
           btnSave={false}
           path="/admin/order-list"
         />
+        <OrderUpdate
+          orderId={list.data.id}
+          orderStatus={list.data.orderStatus}
+          action={refetch}
+        />
         <OrderDetails
+          orderId={list.data.id}
           orderItems={list.data.orderItems}
           billingDetails={list.data.billingDetails}
+          shipiingDetails={list.data.shippingAddress}
           userInfo={list.data.user}
+          orderSummary={{
+            orderDate: list.data.orderDate,
+            shippingPrice: list.data.shippingPrice,
+            taxPrice: list.data.taxPrice,
+            totalPrice: list.data.totalPrice,
+            paymentType: list.data.paymentType,
+          }}
         />
       </div>
     </AdminLayout>

@@ -1,14 +1,14 @@
-import { FiDatabase, FiHeart, FiSmile, FiStar } from "react-icons/fi";
+import { FiDatabase, FiSmile, FiTruck } from "react-icons/fi";
 
 const navbarData = [
   {
     title: "Liviing Room",
     to: "/product-category/living",
-    categories: [
+    children: [
       {
         title: "SOFA COLLECTION",
         to: "/product-category/living/sofa-collection",
-        subCategories: [
+        children: [
           {
             title: "SOFA SETS",
             to: "/product-category/living/sofa-collection/sofa-sets",
@@ -26,7 +26,7 @@ const navbarData = [
       {
         title: "STORAGE",
         to: "/product-category/living/storage",
-        subCategories: [
+        children: [
           {
             title: "BAR-CABINET",
             to: "/product-category/living/storage/bar-cabinet",
@@ -40,7 +40,7 @@ const navbarData = [
       {
         title: "OTHERS",
         to: "#",
-        subCategories: [
+        children: [
           { title: "TV UNITS", to: "/product-category/living/others/tv-units" },
           { title: "BEAN BAG", to: "/product-category/living/others/bean-bag" },
           {
@@ -58,11 +58,11 @@ const navbarData = [
   {
     title: "Bed Room",
     to: "/product-category/bed-room",
-    categories: [
+    children: [
       {
         title: "BEDROOM FURNITURE",
         to: "/product-category/bed-room/bed-room-furniture",
-        subCategories: [
+        children: [
           {
             title: "BEDROOM SET",
             to: "/product-category/bed-room/bed-room-furniture/bed-room-set",
@@ -80,7 +80,7 @@ const navbarData = [
       {
         title: "STORAGE",
         to: "/product-category/bed-room/storage",
-        subCategories: [
+        children: [
           {
             title: "WARDROBES",
             to: "/product-category/bed-room/storage/wardrobes",
@@ -105,7 +105,7 @@ const navbarData = [
 
 const userData = [
   {
-    label: "Manage My Account",
+    label: "My Profile",
     to: "/user/my-account",
     Icon: FiSmile,
   },
@@ -115,14 +115,9 @@ const userData = [
     Icon: FiDatabase,
   },
   {
-    label: "My Reviews",
-    to: "/user/my-reviews",
-    Icon: FiStar,
-  },
-  {
-    label: "My Whitelist",
-    to: "/my-whitelist",
-    Icon: FiHeart,
+    label: "My Address Book",
+    to: "/user/my-address-book",
+    Icon: FiTruck,
   },
 ];
 

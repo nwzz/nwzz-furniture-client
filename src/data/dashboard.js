@@ -1,7 +1,7 @@
 import { HiOutlineHome, HiOutlineShoppingBag } from "react-icons/hi";
-import { FiBox } from "react-icons/fi";
+import { FiBox, FiUsers } from "react-icons/fi";
 
-export const dashboard = [
+export const admindashboard = [
   {
     name: "Dashboard",
     link: "/admin/dashboard",
@@ -20,6 +20,19 @@ export const dashboard = [
   {
     name: "User List",
     link: "/admin/user-list",
+    Icon: FiUsers,
+  },
+];
+
+export const userdashboard = [
+  {
+    name: "My Account",
+    link: "/user/my-account",
+    Icon: HiOutlineHome,
+  },
+  {
+    name: "My Order",
+    link: "/user/my-order",
     Icon: HiOutlineShoppingBag,
   },
 ];

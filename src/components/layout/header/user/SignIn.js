@@ -26,7 +26,7 @@ const SignIn = ({ setToggle }) => {
   const { mutateAsync } = usePostData();
   const [submitting, setSubmitting] = useState(false);
 
-  let { from } = location.state || { from: { pathname: "/user/dashboard" } };
+  let { from } = location.state || { from: { pathname: "/user/my-account" } };
 
   const {
     register,
@@ -89,6 +89,7 @@ const SignIn = ({ setToggle }) => {
             Icon={FaSignInAlt}
             type="submit"
             btnWidth="w-32"
+            disabled={submitting}
           />
         </div>
       </form>

@@ -4,15 +4,18 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { FallbackLoading } from "./components/Loading";
 
 import "./App.css";
-import ModLanding from "./modLanding";
-import ModProductList from "./modProduct";
-import ProductDetails from "./modProduct/productDetails/ProductDetails";
-import ModCartList from "./modCart";
-import ModCheckout from "./modCheckout";
 
+import PrivateRoute, {
+  AdminPrivateRoute,
+  UserPrivateRoute,
+} from "./modAuthnication/ProtectedRoute";
+import * as ModLanding from "./modLanding";
+import * as ModProduct from "./modProduct";
 import * as ModAuthnication from "./modAuthnication";
+import * as ModCart from "./modCart";
+import * as ModCheckout from "./modCheckout";
 import * as ModAdmin from "./modAdmin";
-import PrivateRoute from "./modAuthnication/ProtectedRoute";
+import * as ModUser from "./modUser";
 const NotFound = lazy(() => import("./components/NotFound"));
 
 function App() {
@@ -22,9 +25,10 @@ function App() {
         <Toaster position="top-right" reverseOrder={false} />
         <Switch>
           <Route exact path="/">
-            <ModLanding />
+            <ModLanding.Landing />
           </Route>
 
+          {/* Mod Authnication */}
           <Route path="/signin">
             <ModAuthnication.SignIn />
           </Route>
@@ -35,50 +39,88 @@ function App() {
             <ModAuthnication.ForgetPassword />
           </Route>
 
+          {/* Mod Category */}
           <Route path="/product-category/:category/:subCategory/:superCategory">
-            <ModProductList />
+            <ModProduct.ProductList />
           </Route>
           <Route path="/product-category/:category/:subCategory">
-            <ModProductList />
+            <ModProduct.ProductList />
           </Route>
           <Route path="/product-category/:category">
-            <ModProductList />
+            <ModProduct.ProductList />
           </Route>
           <Route path="/product/:productId">
-            <ProductDetails />
+            <ModProduct.ProductDetails />
           </Route>
           <Route path="/cart">
-            <ModCartList />
+            <ModCart.Cart />
           </Route>
 
+          {/* Mod Checkout */}
           <PrivateRoute path="/checkout">
-            <ModCheckout />
+            <ModCheckout.Checkout />
+          </PrivateRoute>
+
+          {/* User Route */}
+          <PrivateRoute path="/user/my-account">
+            <ModUser.MyAccount />
+          </PrivateRoute>
+          <PrivateRoute exact path="/user/my-orders">
+            <UserPrivateRoute>
+              <ModUser.MyOrder />
+            </UserPrivateRoute>
+          </PrivateRoute>
+          <PrivateRoute path="/user/my-order/details/:id">
+            <UserPrivateRoute>
+              <ModUser.OrderDetails />
+            </UserPrivateRoute>
+          </PrivateRoute>
+          <PrivateRoute path="/user/my-address-book">
+            <UserPrivateRoute>
+              <ModUser.UserAddress />
+            </UserPrivateRoute>
           </PrivateRoute>
 
           {/* Admin Route */}
           <PrivateRoute path="/admin/dashboard">
-            <ModAdmin.Dashboard />
+            <AdminPrivateRoute>
+              <ModAdmin.Dashboard />
+            </AdminPrivateRoute>
           </PrivateRoute>
-
           <PrivateRoute exact path="/admin/product-list">
-            <ModAdmin.ProductList />
+            <AdminPrivateRoute>
+              <ModAdmin.ProductList />
+            </AdminPrivateRoute>
           </PrivateRoute>
           <PrivateRoute path="/admin/product-list/add">
-            <ModAdmin.ProductAdd />
+            <AdminPrivateRoute>
+              <ModAdmin.ProductAdd />
+            </AdminPrivateRoute>
           </PrivateRoute>
           <PrivateRoute path="/admin/product-list/edit/:id">
-            <ModAdmin.ProductEdit />
+            <AdminPrivateRoute>
+              <ModAdmin.ProductEdit />
+            </AdminPrivateRoute>
           </PrivateRoute>
-
           <PrivateRoute exact path="/admin/order-list">
-            <ModAdmin.OrderList />
+            <AdminPrivateRoute>
+              <ModAdmin.OrderList />
+            </AdminPrivateRoute>
           </PrivateRoute>
           <PrivateRoute path="/admin/order-list/edit/:id">
-            <ModAdmin.OrderEdit />
+            <AdminPrivateRoute>
+              <ModAdmin.OrderEdit />
+            </AdminPrivateRoute>
           </PrivateRoute>
-
-          <PrivateRoute path="/admin/user-list">
-            <ModAdmin.UserList />
+          <PrivateRoute exact path="/admin/user-list">
+            <AdminPrivateRoute>
+              <ModAdmin.UserList />
+            </AdminPrivateRoute>
+          </PrivateRoute>
+          <PrivateRoute path="/admin/user-list/edit/:id">
+            <AdminPrivateRoute>
+              <ModAdmin.UserEdit />
+            </AdminPrivateRoute>
           </PrivateRoute>
 
           <Route path="*">
