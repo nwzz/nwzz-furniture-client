@@ -38,6 +38,7 @@ const Banner = () => {
                 Discount <span className="text-red-500">{item.discount}</span>
               </h1>
               <button
+                className="hover:bg-white hover:text-black"
                 type="button"
                 onClick={() => history.push(`/product/${item.id}`)}
               >

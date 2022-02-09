@@ -2,7 +2,7 @@ import { FiDatabase, FiSmile, FiTruck } from "react-icons/fi";
 
 const navbarData = [
   {
-    title: "Liviing Room",
+    title: "Living Room",
     to: "/product-category/living",
     children: [
       {
@@ -94,7 +94,7 @@ const navbarData = [
     to: "/product-category/dining",
   },
   {
-    title: "Deails",
+    title: "Deals",
     to: "/product-category/deails",
   },
   {
