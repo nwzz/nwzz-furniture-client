@@ -34,7 +34,7 @@ const Header = () => {
         {role !== envRole && (
           <>
             <Cart />
-            <User />
+            <User data={list?.data} />
             <div className="lg:hidden">
               <MobileNavbar />
             </div>

@@ -10,6 +10,8 @@ import { useHistory, useLocation } from "react-router-dom";
 import { useGlobalContext } from "../../../../hooks/context";
 import { usePostData } from "../../../../hooks/dataApi";
 import toast from "react-hot-toast";
+import { FcGoogle } from "react-icons/fc";
+import useAuth from "../../../../hooks/useAuth";
 
 const schema = yup.object().shape({
   email: yup
@@ -20,11 +22,13 @@ const schema = yup.object().shape({
 });
 
 const SignIn = ({ setToggle }) => {
+  const { signInUsingGoogle } = useAuth();
   const history = useHistory();
   const location = useLocation();
   const value = useGlobalContext();
   const { mutateAsync } = usePostData();
   const [submitting, setSubmitting] = useState(false);
+  const [user, setUser] = useState([]);
 
   let { from } = location.state || { from: { pathname: "/user/my-account" } };
 
@@ -34,7 +38,7 @@ const SignIn = ({ setToggle }) => {
     reset,
     formState: { errors },
   } = useForm({
-    defaultValues: { email: "admin@gmail.com", password: "12345678" },
+    defaultValues: {},
     resolver: yupResolver(schema),
   });
 
@@ -65,6 +69,27 @@ const SignIn = ({ setToggle }) => {
     }
   };
 
+  const handleGoogleSignIn = async () => {
+    try {
+      const result = await signInUsingGoogle();
+      const userInfo = {
+        fullName: result.user.displayName,
+        email: result.user.email,
+        avater: result.user.photoURL,
+      };
+      const { status, data } = await mutateAsync({
+        path: "/auth/google/signin",
+        formData: userInfo,
+      });
+      if (status === 200) {
+        value.setUser(data.token);
+        history.push(from);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
       <h3 className="font-medium text-md uppercase text-gray-800">Login</h3>
@@ -84,13 +109,25 @@ const SignIn = ({ setToggle }) => {
             register={register}
             errorMessage={password?.message}
           />
-          <PrimaryButton
-            btnText="LOGIN"
-            Icon={FaSignInAlt}
-            type="submit"
-            btnWidth="w-32"
-            disabled={submitting}
-          />
+          <div className="flex gap-10">
+            <PrimaryButton
+              btnText="LOGIN"
+              Icon={FaSignInAlt}
+              type="submit"
+              btnWidth="w-32"
+              disabled={submitting}
+            />
+            <button
+              className="btn-primary"
+              type="button"
+              onClick={handleGoogleSignIn}
+            >
+              LOGIN WITH
+              <span>
+                <FcGoogle size={24} />
+              </span>
+            </button>
+          </div>
         </div>
       </form>
 

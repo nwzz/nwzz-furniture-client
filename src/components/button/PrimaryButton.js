@@ -1,6 +1,6 @@
 import React from "react";
 
-const PrimaryButton = ({ btnText, Icon, type, btnWidth, disabled }) => {
+const PrimaryButton = ({ btnText, Icon, type, btnWidth, disabled, size }) => {
   return (
     <button
       className={`${btnWidth} btn-primary`}
@@ -8,7 +8,7 @@ const PrimaryButton = ({ btnText, Icon, type, btnWidth, disabled }) => {
       disabled={disabled}
     >
       <span className="pr-3">{btnText}</span>
-      {Icon && <Icon />}
+      {Icon && <Icon size={size} />}
     </button>
   );
 };
