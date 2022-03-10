@@ -4,6 +4,7 @@ import { IoPersonSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { userData } from "../../../../data/header";
 import { useGlobalContext } from "../../../../hooks/context";
+//import { useGetData, useGetDataWithLogin } from "../../../../hooks/dataApi";
 import Modal from "../../../Modal";
 import ForgetPassword from "./ForgetPassword";
 import SignIn from "./SignIn";
@@ -14,7 +15,6 @@ const User = () => {
   const [open, setOpen] = useState(false);
   const [toggle, setToggle] = useState("signin");
   const { user, signOut } = value;
-
   return (
     <div className="relative">
       {!user ? (
@@ -41,7 +41,7 @@ const User = () => {
       ) : (
         <div className="relative group">
           <img
-            src="https://image.flaticon.com/icons/png/512/149/149071.png"
+            src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg"
             className="w-8 h-8 rounded cursor-pointer"
             alt=""
           />
