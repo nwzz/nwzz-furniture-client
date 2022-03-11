@@ -10,13 +10,11 @@ import ForgetPassword from "./ForgetPassword";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 
-const User = ({ data }) => {
+const User = () => {
   const value = useGlobalContext();
   const [open, setOpen] = useState(false);
   const [toggle, setToggle] = useState("signin");
   const { user, signOut } = value;
-
-  console.log("data from user", data);
 
   return (
     <div className="relative">
@@ -44,7 +42,7 @@ const User = ({ data }) => {
       ) : (
         <div className="relative group">
           <img
-            src={data?.avater}
+            src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg"
             className="w-8 h-8 rounded cursor-pointer"
             alt=""
           />

@@ -18,7 +18,10 @@ const SubMenu = ({ item }) => {
                 {subItem.children.length > 0 &&
                   subItem.children.map((superItem, idx) => (
                     <li key={idx}>
-                      <Link to={superItem.to} className="text-black block py-2">
+                      <Link
+                        to={superItem.to}
+                        className=" text-black py-1 -ml-1 px-1 inline hover:bg-gray-700 hover:text-gray-100"
+                      >
                         {superItem.title}
                       </Link>
                     </li>

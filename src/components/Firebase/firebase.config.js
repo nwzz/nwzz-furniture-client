@@ -1,9 +1,9 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDdF2a72mfHB4BgLqY_sA2jHiUCoHq-DxQ",
-  authDomain: "nwzz-tourpacker.firebaseapp.com",
-  projectId: "nwzz-tourpacker",
-  storageBucket: "nwzz-tourpacker.appspot.com",
-  messagingSenderId: "751077636736",
-  appId: "1:751077636736:web:028e2e7836e5c57ca00465"
-  };
-  export default firebaseConfig;
+  apiKey: "AIzaSyAuDUgsJNFWIOP8gWd7tWZSlDCzZQoM3Tg",
+  authDomain: "e-furniture-shop.firebaseapp.com",
+  projectId: "e-furniture-shop",
+  storageBucket: "e-furniture-shop.appspot.com",
+  messagingSenderId: "311545475979",
+  appId: "1:311545475979:web:f0459cca9dc0850143f58e",
+};
+export default firebaseConfig;
